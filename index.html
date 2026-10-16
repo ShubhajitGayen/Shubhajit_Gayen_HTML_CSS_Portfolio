@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Portfolio of Shubhajit Gayen, a Computer Science student focused on backend development and DevOps.">
+  <title>Shubhajit Gayen | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#home">Shubhajit Gayen</a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="hero-role">Backend development and DevOps</p>
+          <h1>Hi, I'm Shubhajit Gayen. I build web apps and keep them running.</h1>
+          <p class="hero-intro">I'm a Computer Science Engineering student who builds PHP and MySQL applications,
+            deploys them on AWS, and watches them with Prometheus and Grafana.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">See my projects</a>
+            <a class="btn btn-secondary" href="#contact">Get in touch</a>
+          </div>
+        </div>
+        <div class="hero-card" aria-hidden="true">
+          <div class="code-window">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <pre>&lt;?php
+$dev = "Shubhajit";
+echo "Hello, $dev!";
+?&gt;</pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About me</h2>
+        <div class="about-grid">
+          <p class="about-bio">I'm a Computer Science Engineering student with hands-on experience in backend
+            development, database management, cloud deployment, and infrastructure monitoring. I have built scalable PHP
+            and MySQL web applications, deployed services on AWS EC2, and set up real-time monitoring with Prometheus
+            and Grafana. My foundation is strong in DBMS, operating systems, data structures, and cloud technologies,
+            and I'm passionate about backend development and DevOps.</p>
+          <article class="info-card">
+            <h3>Education</h3>
+            <p>B.Tech in Computer Science &amp; Engineering<br>Ideal Institute of Engineering (MAKAUT), West
+              Bengal<br>Expected graduation: 2027</p>
+            <p>Higher Secondary (WBCHSE), 2023: 78.8%<br>Secondary (WBBSE), 2021: 85.5%</p>
+          </article>
+          <article class="info-card">
+            <h3>Career interests</h3>
+            <p>Backend development, database management, cloud deployment, and DevOps.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <h2>Skills</h2>
+        <div class="skill-groups">
+          <article class="skill-group">
+            <h3>Languages</h3>
+            <ul class="skills-list">
+              <li>PHP</li>
+              <li>JavaScript</li>
+              <li>C</li>
+              <li>SQL</li>
+              <li>Python</li>
+              <li>Java</li>
+            </ul>
+          </article>
+          <article class="skill-group">
+            <h3>Frontend</h3>
+            <ul class="skills-list">
+              <li>HTML5</li>
+              <li>CSS3</li>
+            </ul>
+          </article>
+          <article class="skill-group">
+            <h3>Backend and database</h3>
+            <ul class="skills-list">
+              <li>PHP</li>
+              <li>REST API</li>
+              <li>MySQL</li>
+              <li>PDO</li>
+            </ul>
+          </article>
+          <article class="skill-group">
+            <h3>Cloud and monitoring</h3>
+            <ul class="skills-list">
+              <li>AWS EC2</li>
+              <li>Prometheus</li>
+              <li>Grafana</li>
+              <li>mysqld_exporter</li>
+            </ul>
+          </article>
+          <article class="skill-group">
+            <h3>Tools</h3>
+            <ul class="skills-list">
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>Linux</li>
+              <li>Apache</li>
+              <li>VS Code</li>
+            </ul>
+          </article>
+          <article class="skill-group">
+            <h3>Concepts</h3>
+            <ul class="skills-list">
+              <li>DBMS</li>
+              <li>Operating Systems</li>
+              <li>Data Structures</li>
+              <li>Computer Networks</li>
+              <li>OOP</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="project-grid">
+          <article class="project-card">
+            <h3>Dhoti Mahal: Traditional Indian Attire E-Commerce Platform</h3>
+            <ul class="project-points">
+              <li>Full-stack PHP and MySQL store with authentication, shopping cart, checkout, and UPI payment
+                integration.</li>
+              <li>Admin dashboard to manage products, orders, inventory, categories, banners, and customers.</li>
+              <li>AJAX operations, PDO prepared statements, bcrypt password hashing, CSRF protection, and secure
+                sessions.</li>
+            </ul>
+            <p class="tech"><strong>Technologies:</strong> PHP, MySQL, HTML, CSS, JavaScript, PDO, Apache, Git</p>
+          </article>
+          <article class="project-card">
+            <h3>MySQL Monitoring Dashboard</h3>
+            <ul class="project-points">
+              <li>Real-time monitoring solution built on AWS EC2, Prometheus, Grafana, and mysqld_exporter.</li>
+              <li>Dashboards for MySQL performance, database health, and server metrics.</li>
+              <li>Monitoring services deployed securely on Linux.</li>
+            </ul>
+            <p class="tech"><strong>Technologies:</strong> AWS EC2, Linux, Prometheus, Grafana, MySQL</p>
+          </article>
+          <article class="project-card">
+            <h3>College Event Portal</h3>
+            <ul class="project-points">
+              <li>PHP and MySQL web application for online event registration and participant management.</li>
+              <li>Secure login, CRUD operations, and report generation.</li>
+            </ul>
+            <p class="tech"><strong>Technologies:</strong> PHP, MySQL, HTML, CSS</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <h2>Contact</h2>
+        <p class="contact-lead">I'm open to internships, collaborations, and feedback on my work.</p>
+        <ul class="contact-list">
+          <li><span>Email</span> <a href="mailto:cseshubhajitiie@gmail.com">cseshubhajitiie@gmail.com</a></li>
+          <li><span>LinkedIn</span> <a href="https://www.linkedin.com/in/shubhajitgayen/" target="_blank"
+              rel="noopener">My LinkedIn profile</a></li>
+          <li><span>GitHub</span> <a href="https://github.com/ShubhajitGayen/" target="_blank" rel="noopener">My GitHub
+              profile</a></li>
+          <li><span>Location</span> West Bengal, India</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Shubhajit Gayen. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

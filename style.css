@@ -1,0 +1,141 @@
+/* ---------- Variables ---------- */
+:root {
+  --ink: #14213d;
+  --ink-soft: #4a5568;
+  --blue: #3250d0;
+  --blue-dark: #24399b;
+  --sun: #ffc233;
+  --bg: #f5f7fb;
+  --white: #ffffff;
+  --line: #d9deea;
+  --radius: 10px;
+}
+
+/* ---------- Global ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--bg);
+}
+h1, h2, h3 { line-height: 1.2; margin: 0 0 0.6em; }
+h1 { font-size: clamp(2rem, 5vw, 3.4rem); letter-spacing: -0.02em; }
+h2 { font-size: 1.9rem; }
+h3 { font-size: 1.15rem; }
+p { margin: 0 0 1em; max-width: 65ch; }
+a { color: var(--blue); }
+a:hover { color: var(--blue-dark); }
+:focus-visible { outline: 3px solid var(--sun); outline-offset: 3px; }
+.container { width: min(1080px, 100% - 2.5rem); margin-inline: auto; }
+
+/* ---------- Header ---------- */
+.site-header {
+  position: sticky; top: 0; z-index: 10;
+  background: var(--ink);
+}
+.header-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 0.5rem 1.5rem; padding: 0.8rem 0;
+}
+.logo { color: var(--white); font-weight: 700; font-size: 1.2rem; text-decoration: none; }
+.logo:hover { color: var(--sun); }
+.nav-list { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; list-style: none; margin: 0; padding: 0; }
+.nav-list a {
+  display: inline-block; padding: 0.3rem 0.1rem;
+  color: #dfe5f5; text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+.nav-list a:hover, .nav-list a:focus-visible { color: var(--white); border-bottom-color: var(--sun); }
+
+/* ---------- Hero ---------- */
+.hero { background: var(--ink); color: var(--white); padding: 4rem 0 5rem; }
+.hero-inner { display: flex; align-items: center; gap: 3rem; }
+.hero-text { flex: 1.4; }
+.hero-role { color: var(--sun); font-weight: 600; margin-bottom: 0.5rem; }
+.hero-intro { color: #dfe5f5; font-size: 1.1rem; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 1.5rem; }
+.hero-card { flex: 1; }
+.code-window {
+  background: #0c1529; border: 1px solid #2d3b63; border-radius: var(--radius);
+  padding: 1rem 1.2rem 1.2rem;
+}
+.dot { display: inline-block; width: 11px; height: 11px; border-radius: 50%; background: var(--sun); margin-right: 6px; opacity: 0.85; }
+.code-window pre { margin: 1rem 0 0; color: #b9c7f5; font-family: Consolas, "Courier New", monospace; font-size: 0.95rem; overflow-x: auto; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block; padding: 0.75rem 1.4rem; border-radius: 6px;
+  font-weight: 600; text-decoration: none; border: 2px solid transparent;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.btn-primary { background: var(--sun); color: var(--ink); }
+.btn-primary:hover, .btn-primary:focus-visible { background: var(--white); color: var(--ink); }
+.btn-secondary { color: var(--white); border-color: #8f9bc4; }
+.btn-secondary:hover, .btn-secondary:focus-visible { color: var(--ink); background: var(--white); border-color: var(--white); }
+
+/* ---------- Sections ---------- */
+.section { padding: 4rem 0; }
+.section-alt { background: var(--white); }
+.about-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 1.5rem; }
+.about-bio { grid-row: span 2; font-size: 1.05rem; }
+.info-card { background: var(--white); border: 1px solid var(--line); border-left: 5px solid var(--blue); border-radius: var(--radius); padding: 1.1rem 1.3rem; }
+.info-card p { margin: 0; color: var(--ink-soft); }
+
+/* ---------- Skills ---------- */
+.skills-list { display: flex; flex-wrap: wrap; gap: 0.75rem; list-style: none; margin: 0; padding: 0; }
+.skills-list li {
+  background: var(--bg); border: 1px solid var(--line); border-radius: 999px;
+  padding: 0.5rem 1.1rem; font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+}
+.skills-list li:hover { background: var(--blue); color: var(--white); border-color: var(--blue); }
+
+/* ---------- Projects ---------- */
+.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+.project-card {
+  background: var(--white); border: 1px solid var(--line); border-top: 5px solid var(--sun);
+  border-radius: var(--radius); padding: 1.4rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.project-card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(20, 33, 61, 0.12); }
+.project-card:focus-within { box-shadow: 0 0 0 3px var(--sun); }
+.tech { color: var(--ink-soft); font-size: 0.95rem; margin: 0; }
+
+/* ---------- Contact ---------- */
+.contact-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.8rem; }
+.contact-list li { display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; }
+.contact-list span { min-width: 5.5rem; font-weight: 700; }
+.contact-list a { overflow-wrap: anywhere; }
+
+/* ---------- Footer ---------- */
+.site-footer { background: var(--ink); color: #dfe5f5; padding: 1.5rem 0; text-align: center; }
+.site-footer p { margin: 0 auto; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 800px) {
+  .hero { padding: 2.5rem 0 3rem; }
+  .hero-inner { flex-direction: column; align-items: stretch; gap: 2rem; }
+  .about-grid { grid-template-columns: 1fr; }
+  .about-bio { grid-row: auto; }
+  .section { padding: 3rem 0; }
+}
+@media (max-width: 480px) {
+  .header-inner { justify-content: center; }
+  .btn { width: 100%; text-align: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
+
+/* ---------- Additions: grouped skills, project bullets ---------- */
+.skill-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem 2rem; }
+.skill-group h3 { margin-bottom: 0.6rem; color: var(--blue-dark); }
+.project-points { margin: 0 0 1rem; padding-left: 1.2rem; color: var(--ink-soft); }
+.project-points li { margin-bottom: 0.5rem; }
+.project-card h3 { margin-bottom: 0.8rem; }
+.info-card p + p { margin-top: 0.8rem; }
+.code-window pre { white-space: pre-wrap; }
